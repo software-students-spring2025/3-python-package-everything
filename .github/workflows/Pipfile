@@ -8,8 +8,17 @@ gitcommitlogger = "*"
 requests = "*"
 pytz = "*"
 python-dateutil = "*"
+certifi = "*"
+charset-normalizer = "*"
+idna = "*"
+six = "*"
+urllib3 = "*"
+build = "*"
+twine = "*"
+pytest = "*"
 
 [dev-packages]
+pytest = "*"
 
 [requires]
 python_version = "3"
