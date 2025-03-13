@@ -27,7 +27,7 @@ pip install facedbook
 
 Once installed, you can easily use its functions in your Python code.
 
-### Replace words with faces
+### Replace words with faces: replace_with_faces()
 
 ```
 from facedbook.faces import replace_with_faces
@@ -42,7 +42,7 @@ Example output:
 This (づ ᴗ _ᴗ)づ♡ project (๑♡⌓♡๑) is fun ( ´͈ ᗨ `͈ )!
 ```
 
-### Generate a spooky story
+### Generate a spooky story: face_story()
 
 ```
 from facedbook.stories import face_story
@@ -58,7 +58,7 @@ Example output:
 (☉_☉’) was cursed by (ᗒᗣᗕ)՞.
 ```
 
-### Get a face based on emotion
+### Get a face based on emotion: ask_user_feeling()
 
 ```
 from facedbook.feelings import ask_user_feeling
@@ -72,7 +72,7 @@ Example output:
 (⌒▽⌒)☆
 ```
 
-### Encode words into faces
+### Encode words into faces: face_encoder()
 
 ```
 from facedbook.encoder import face_encoder

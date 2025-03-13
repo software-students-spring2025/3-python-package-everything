@@ -11,7 +11,7 @@ def main():
             'All team members must have visibly contributed to the code using their own git & GitHub accounts in order to claim that they contributed to the project.'
         ))
 
-    # testing for face_story
+    # testing face_story
     print("\nspooky story... \n")
     print(face_story(3))
     print("\nLOOK BEHIND YOU...\n")
