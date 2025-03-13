@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "268067a4f6c50628892a0fe84207e9e4a1e5cfba47229e6bb7a8240a0a6e1bef"
+            "sha256": "557dd8c2ce947eba618ce9a34c53dead8564c8898b5bda997610a1731366cee5"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -140,6 +140,15 @@
             ],
             "markers": "python_version >= '3.9'",
             "version": "==0.21.2"
+        },
+        "gitcommitlogger": {
+            "hashes": [
+                "sha256:3badf5db541d81cc3473882d9d255dabc66cd413e780ccb4fe6b320afddedcd0",
+                "sha256:7bafd58d46441b8c01b0f5706e7242df0ff841b3f87a7f621979577758546869"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.7'",
+            "version": "==1.2.5"
         },
         "id": {
             "hashes": [
@@ -293,6 +302,23 @@
             "markers": "python_version >= '3.8'",
             "version": "==8.3.5"
         },
+        "python-dateutil": {
+            "hashes": [
+                "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3",
+                "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2'",
+            "version": "==2.9.0.post0"
+        },
+        "pytz": {
+            "hashes": [
+                "sha256:89dd22dca55b46eac6eda23b2d72721bf1bdfef212645d81513ef5d03038de57",
+                "sha256:c2db42be2a2518b28e65f9207c4d05e6ff547d1efa4086469ef855e4ab70178e"
+            ],
+            "index": "pypi",
+            "version": "==2025.1"
+        },
         "readme-renderer": {
             "hashes": [
                 "sha256:2fbca89b81a08526aadf1357a8c2ae889ec05fb03f5da67f9769c9a592166151",
@@ -306,6 +332,7 @@
                 "sha256:55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760",
                 "sha256:70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6"
             ],
+            "index": "pypi",
             "markers": "python_version >= '3.8'",
             "version": "==2.32.3"
         },
