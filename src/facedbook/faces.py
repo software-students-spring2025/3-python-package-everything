@@ -2,7 +2,7 @@ import random
 
 
 # function to replace a random number of words in a sentence with a face
-def replace_with_faces(sentence):
+def replace_with_faces(sentence: str) -> str:
     faces = {
         0: "૮ ˶ᵔ ᵕ ᵔ˶ ა",
         1: "ପ(๑•ᴗ•๑)ଓ ♡",
