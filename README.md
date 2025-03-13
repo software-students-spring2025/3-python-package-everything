@@ -100,14 +100,14 @@ cd 3-python-package-everything
 2. Create a Virtual Environment
 
 ```
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+pipenv install
+pipenv shell
 ```
 
 3. Install Dependencies
 
 ```
-pip install -r requirements.txt
+pipenv install --dev
 ```
 
 4. Run Tests
