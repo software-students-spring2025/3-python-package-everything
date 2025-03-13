@@ -21,7 +21,7 @@ You can install facedbook directly from PyPI using:
 pip install facedbook
 ```
 
-[facedbook on PyPI](LINK)
+[facedbook on PyPI](https://pypi.org/project/facedbook/)
 
 ## Usage and Examples
 
