@@ -11,6 +11,7 @@ Its features include:
 - Replacing words in a sentence with expressive keyboard faces
 - Generating creepy horror stories with random actions and spooky characters
 - Displaying emotions with keyboard keys based on how a user is feeling
+- Encoding words into emotion-based faces
 
 ## Installation
 
@@ -20,37 +21,31 @@ You can install facedbook directly from PyPI using:
 pip install facedbook
 ```
 
-[Facedbook on PyPI](LINK)
+[facedbook on PyPI](LINK)
 
 ## Usage and Examples
 
 Once installed, you can easily use its functions in your Python code.
 
 **Replace words with faces**
-
 ```
 from facedbook.faces import replace_with_faces
 
 sentence = "This project is so cool and fun to use!"
 print(replace_with_faces(sentence))
 ```
-
 - Example output:
-
 ```
 This (づ ᴗ _ᴗ)づ♡ project (๑♡⌓♡๑) is fun ( ´͈ ᗨ `͈ )!
 ```
 
 **Generate a spooky story**
-
 ```
 from facedbook.stories import face_story
 
 print(face_story(3))  # Generates a 3-sentence scary story
 ```
-
 - Example output:
-
 ```
 (ノωヽ) saw something move in the shadows behind (／。＼).
 Σ(°△°|||)︴ was trapped in a haunted house with (つ﹏⊂).
@@ -58,23 +53,32 @@ print(face_story(3))  # Generates a 3-sentence scary story
 ```
 
 **Get a face based on emotion**
-
 ```
 from facedbook.feelings import ask_user_feeling
 
 print(ask_user_feeling("happy"))  # Returns a happy face
 ```
-
 - Example output:
-
 ```
 (⌒▽⌒)☆
+```
+
+**Encode words into faces**
+```
+from facedbook.encoder import face_encoder
+
+print(face_encoder("happy", 3))  # Returns 3 happy faces
+```
+- Example output: 
+```
+(* ^ ω ^)
+╰(▔ ∀ ▔)╯
+(✯◡✯)
 ```
 
 ## Developer Setup & Contribution
 
 1. Clone the Repository
-
 ```
 git clone https://github.com/software-students-spring2025/3-python-package-everything.git
 cd 3-python-package-everything
@@ -107,11 +111,10 @@ python -m twine upload dist/*
 ```
 
 ## Contributors
-
-[Claire Kim] (https://github.com/radishsoups)
-[Jennifer Yu] (https://github.com/jenniferyuuu)
-[Iva Park] (https://github.com/ivapark)
-[Chrisim Kim] (https://github.com/ChrisimKim)
+* [Claire Kim](https://github.com/radishsoups)
+* [Jennifer Yu](https://github.com/jenniferyuuu)
+* [Iva Park](https://github.com/ivapark)
+* [Chrisim Kim](https://github.com/ChrisimKim)
 
 ## Configuration & Running Instructions
 
