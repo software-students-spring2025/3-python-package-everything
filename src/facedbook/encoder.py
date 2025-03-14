@@ -74,3 +74,5 @@ def face_encoder(word, number=1):
             emoticons.append(all_faces[i]) 
         
         return "\n".join(emoticons)
+    
+    return "error: face cannot be found for this word"
