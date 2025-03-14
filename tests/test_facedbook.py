@@ -1,7 +1,7 @@
-from src.facedbook.faces import replace_with_faces
-from src.facedbook.stories import face_story
-from src.facedbook.feelings import ask_user_feeling
-from src.facedbook.encoder import face_encoder
+from facedbook.faces import replace_with_faces
+from facedbook.stories import face_story
+from facedbook.feelings import ask_user_feeling
+from facedbook.encoder import face_encoder
 
 
 # tests for replace_with_faces()
