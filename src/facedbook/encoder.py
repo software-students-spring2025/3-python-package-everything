@@ -1,5 +1,3 @@
-import random
-
 # function that gets a face based on a word (emotions and actions)
 def face_encoder(word, number=1):
     faces = {
