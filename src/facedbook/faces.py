@@ -80,21 +80,22 @@ def replace_with_faces(sentence: str) -> str:
         73: "˃̵ᴗ˂̵",
         74: "ヾ( ˃ᴗ˂ )◞ • *✰"
     }
-
     words = sentence.split(' ')
     length = len(words)
 
     # if user input is correct
-    if length > 0:
-        num_to_replace = random.randint(
-            1, length)  # random number of words to replace
+    if sentence != '':
+        if length > 0:
+            num_to_replace = random.randint(
+                1, length)  # random number of words to replace
 
-        for _ in range(num_to_replace):
-            rand_index = random.randint(0,
-                                        length - 1)  # choose word to replace
-            rand_face = random.randint(0, 74)  # choose face to replace with
-            words[rand_index] = faces[rand_face]
+            for _ in range(num_to_replace):
+                rand_index = random.randint(0, length -
+                                            1)  # choose word to replace
+                rand_face = random.randint(0,
+                                           74)  # choose face to replace with
+                words[rand_index] = faces[rand_face]
 
-        return ' '.join(words)
+            return ' '.join(words)
 
     return 'Please enter a sentence'
