@@ -117,3 +117,12 @@ def test_face_encoder_invalid_word():
         faces, str
     ), f"Expected face_encoder() to return an error message as a string. However, it returned {faces}."
     assert faces == "error: face cannot be found for this word", f"Expected face_encoder() to output an error message. However, it outputted {faces}."
+
+def test_face_encoder_case():
+    """
+    Checks that face_encoder() returns the same output with lowercase and uppercase input (case insensitivity)
+    """
+    faces_upper = encoder.face_encoder("HAPPY", 3)
+    faces_lower = encoder.face_encoder("happy", 3)
+    assert faces_upper == faces_lower, f"Expected face_encoder() to have the same output for both lowercase and uppercase word input. Lowercase input outputted {faces_lower} , while uppercase input outputted {faces_upper}."
+    
