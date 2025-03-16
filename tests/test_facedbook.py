@@ -69,6 +69,32 @@ def test_face_story_type_error(
 
 
 # tests for ask_user_feeling()
+def test_ask_user_feeling_valid():  
+    valid_feelings = ["happy", "sad", "mad", "soso"]
+    for feeling in valid_feelings:
+        result = feelings.ask_user_feeling(feeling)
+        assert isinstance(result, str), f"Expected a string, but got {type(result)}."
+        assert result.strip() != "", f"Expected a valid emoji, but got an empty string for {feeling}."
+
+def test_ask_user_feeling_invalid():
+    result = feelings.ask_user_feeling("excited")
+    assert isinstance(result, str), f"Expected a string error message, but got {type(result)}."
+    assert result == "error: feeling cannot be found", f"Unexpected output for invalid input: {result}."
+
+def test_ask_user_feeling_numeric_input():
+    result = feelings.ask_user_feeling("123")
+    assert isinstance(result, str), f"Expected an error message as a string, but got {type(result)}."
+    assert result == "error: feeling cannot be found", f"Unexpected output for numeric input: {result}."
+
+def test_ask_user_feeling_special_characters():
+    result = feelings.ask_user_feeling("!@#$%^&*()")
+    assert isinstance(result, str), f"Expected an error message as a string, but got {type(result)}."
+    assert result == "error: feeling cannot be found", f"Unexpected output for special character input: {result}."
+
+def test_ask_user_feeling_empty_string():
+    result = feelings.ask_user_feeling("")
+    assert isinstance(result, str), f"Expected an error message as a string, but got {type(result)}."
+    assert result == "error: feeling cannot be found", f"Unexpected output for empty input: {result}."
 
 
 # tests for face_encoder()
