@@ -1,0 +1,57 @@
+name: CI
+on:
+  push:
+    branches: [main] # run tests + publish only on pushes to 'main'
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Python, pipenv, and dependencies
+        uses: kojoru/prepare-pipenv@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          pipenv install --dev
+
+      - name: Run tests
+        run: |
+          pipenv run pytest --tb=short --disable-warnings
+
+  publish:
+    needs: build # runs 'publish' only if 'build' passes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Python and pipenv
+        uses: kojoru/prepare-pipenv@v1
+        with:
+          python-version: "3.11"
+
+      - name: Install build dependencies
+        run: |
+          pip install --upgrade build twine
+
+      - name: Build the package
+        run: |
+          rm -rf dist/*
+          python -m build
+
+      - name: Publish to PyPI
+        env:
+          PYPI_API_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          python -m twine upload --skip-existing --username __token__ --password $PYPI_API_TOKEN dist/*

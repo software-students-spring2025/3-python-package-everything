@@ -51,8 +51,7 @@ def test_face_story_empty():  # ensure it returns empty string
     story = stories.face_story(0)
     assert story == ""
 
-
-def test_face_story_large_input():  # ensure it returns a string of 10 lines
+def test_face_story_large_input(): # ensure it returns a string of large inputs
     story = stories.face_story(10)
     assert isinstance(story, str)
     assert len(story.split("\n")) == 10
