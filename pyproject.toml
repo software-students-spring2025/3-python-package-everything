@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "facedbook"
 description = "A package that incorporates kaomojis for the user."
-version = "0.1.1"
+version = "0.1.2"
 authors = [
   { name="Team Everything" },
 ]
