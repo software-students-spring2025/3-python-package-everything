@@ -1,7 +1,7 @@
-name: CI 
+name: CI
 on:
   push:
-    branches: [main]  # run tests + publish only on pushes to 'main'
+    branches: [main] # run tests + publish only on pushes to 'main'
   pull_request:
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
           pipenv run pytest --tb=short --disable-warnings
 
   publish:
-    needs: build  # runs 'publish' only if 'build' passes
+    needs: build # runs 'publish' only if 'build' passes
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -47,10 +47,11 @@ jobs:
 
       - name: Build the package
         run: |
+          rm -rf dist/*
           python -m build
 
       - name: Publish to PyPI
         env:
           PYPI_API_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
-          python -m twine upload --username __token__ --password $PYPI_API_TOKEN dist/*
+          python -m twine upload --skip-existing --username __token__ --password $PYPI_API_TOKEN dist/*
