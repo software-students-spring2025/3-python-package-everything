@@ -6,10 +6,8 @@ import facedbook.encoder as encoder
 
 
 def main():
-    # print(
-    #     faces.replace_with_faces(
-    #         'All team members must have visibly contributed to the code using their own git & GitHub accounts in order to claim that they contributed to the project.'
-    #     ))
+    # testing replace_with_faces
+    print(faces.replace_with_faces("This project is so cool and fun to use!"))
 
     # testing face_story
     print("\nspooky story... \n")
