@@ -17,8 +17,7 @@ def test_empty_string():  # ensure it handles empty strings
     assert faces.replace_with_faces("") == "Please enter a sentence"
 
 
-def test_replacing_one_word(
-):  # ensure it replaces at least one word with a face
+def test_replacing_one_word():  # ensure it replaces at least one word with a face
     sentence = "This is a test for the function."
     result = faces.replace_with_faces(sentence)
     assert result != sentence
