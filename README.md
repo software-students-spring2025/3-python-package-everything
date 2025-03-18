@@ -25,7 +25,7 @@ pip install facedbook
 
 ## Usage and Examples
 
-Once installed, you can easily use its functions in your Python code.
+Once installed, you can easily use its functions in your Python code. An example program can be found [here](https://github.com/software-students-spring2025/3-python-package-everything/tree/main/example.py).
 
 ### Replace words with faces: replace_with_faces()
 
