@@ -17,8 +17,7 @@ def test_empty_string():  # ensure it handles empty strings
     assert faces.replace_with_faces("") == "Please enter a sentence"
 
 
-def test_replacing_one_word(
-):  # ensure it replaces at least one word with a face
+def test_replacing_one_word():  # ensure it replaces at least one word with a face
     sentence = "This is a test for the function."
     result = faces.replace_with_faces(sentence)
     assert result != sentence
@@ -73,27 +72,37 @@ def test_ask_user_feeling_valid():
     valid_feelings = ["happy", "sad", "mad", "soso"]
     for feeling in valid_feelings:
         result = feelings.ask_user_feeling(feeling)
-        assert isinstance(result, str), f"Expected a string, but got {type(result)}."
+        assert isinstance(
+            result, str
+        ), f"Expected a string, but got {type(result)}."
         assert result.strip() != "", f"Expected a valid emoji, but got an empty string for {feeling}."
 
 def test_ask_user_feeling_invalid():
     result = feelings.ask_user_feeling("excited")
-    assert isinstance(result, str), f"Expected a string error message, but got {type(result)}."
+    assert isinstance(
+        result, str
+    ), f"Expected a string error message, but got {type(result)}."
     assert result == "error: feeling cannot be found", f"Unexpected output for invalid input: {result}."
 
 def test_ask_user_feeling_numeric_input():
     result = feelings.ask_user_feeling("123")
-    assert isinstance(result, str), f"Expected an error message as a string, but got {type(result)}."
+    assert isinstance(
+        result, str
+    ), f"Expected an error message as a string, but got {type(result)}."
     assert result == "error: feeling cannot be found", f"Unexpected output for numeric input: {result}."
 
 def test_ask_user_feeling_special_characters():
     result = feelings.ask_user_feeling("!@#$%^&*()")
-    assert isinstance(result, str), f"Expected an error message as a string, but got {type(result)}."
+    assert isinstance(
+        result, str
+    ), f"Expected an error message as a string, but got {type(result)}."
     assert result == "error: feeling cannot be found", f"Unexpected output for special character input: {result}."
 
 def test_ask_user_feeling_empty_string():
     result = feelings.ask_user_feeling("")
-    assert isinstance(result, str), f"Expected an error message as a string, but got {type(result)}."
+    assert isinstance(
+        result, str
+    ), f"Expected an error message as a string, but got {type(result)}."
     assert result == "error: feeling cannot be found", f"Unexpected output for empty input: {result}."
 
 
