@@ -13,6 +13,7 @@ build = "*"
 twine = "*"
 pytest = "*"
 exceptiongroup = "*"
+facedbook = {file = ".", editable = true}
 
 [dev-packages]
 pytest = "*"
