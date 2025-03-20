@@ -78,7 +78,7 @@ def test_ask_user_feeling_valid():
         assert result.strip() != "", f"Expected a valid emoji, but got an empty string for {feeling}."
 
 def test_ask_user_feeling_invalid():
-    result = feelings.ask_user_feeling("excited")
+    result = feelings.ask_user_feeling("annoyed")
     assert isinstance(
         result, str
     ), f"Expected a string error message, but got {type(result)}."

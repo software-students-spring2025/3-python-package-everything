@@ -17,7 +17,7 @@ def main():
 
     # Ask the user how they feel and show a related face emoji
     print("\n Feeling Check! \n")
-    print("\n How are you feeling today? (happy, sad, mad, soso): \n")
+    print("How are you feeling today? (happy, sad, mad, soso, excited, tired, nervous, love, surprised, confused, scared, bored): \n")
     print(feelings.ask_user_feeling("happy"))
 
     # testing face_encoder
