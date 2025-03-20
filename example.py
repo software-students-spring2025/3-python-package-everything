@@ -16,7 +16,7 @@ def example():
 
     # Get a face based on emotion: ask_user_feeling()
     print("\n Feeling Check!\n")
-    print ("How are you feeling today? (happy, sad, mad, soso, excited, tired, nervous, love, surprised, confused, scared, bored): \n")
+    print ("How are you feeling today? (happy, sad, mad, soso, excited, tired, nervous, love, surprised, confused, scared, bored): happy\n")
     print(ask_user_feeling("happy"))
     
     # Encode words into faces: face_encoder()
